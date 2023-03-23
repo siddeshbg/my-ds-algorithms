@@ -19,6 +19,13 @@ class Graph:
             return True
         return False
     
+    def add_direct_edge(self, n1, n2):
+        # For direct edge, we just add only one edge
+        if n1 in self.adj_list.keys() and n2 in self.adj_list.keys():
+            self.adj_list[n1].append(n2)
+            return True
+        return False
+    
     def remove_edge(self, n1, n2):
         if n1 in self.adj_list.keys() and n2 in self.adj_list.keys():
             try:
